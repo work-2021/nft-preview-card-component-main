@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "product-normal";
+  src: url("../font/product-sans-regular.ttf");
+}
+@font-face {
+  font-family: "product-bold";
+  src: url("../font/product-sans-bold.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "product-normal";
+  color: #FFF;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #0D192B;
+}
+.main-card {
+  width: 90%;
+  padding: 18px 18px 25px ;
+  border-radius: 15px;
+  background-color: #14253D;
+}
+.main-card .img-box {
+  position: relative;
+  overflow: hidden;
+  height: 288px;
+  border-radius: 10px;
+}
+.main-card .img-box > img {
+  width: 100%;
+}
+.main-card .img-box .layer {
+  transform: scale(0);
+  transition: .4s;
+}
+.main-card .img-box:hover .layer {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%,35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transform: scale(1);
+  position: absolute ;
+  left: 0;
+  top: 0;
+}
+.main-card .content-box {
+  margin-top: 15px;
+}
+.main-card .content-box h1 {
+  font-size: 1.6em;
+  font-family: "product-bold";
+  transition: .4s;
+}
+.main-card .content-box h1:hover {
+  color: #00FFF7;
+}
+.main-card .content-box p {
+  font-size: .95em;
+  margin: 10px 0 20px;
+  color: #8BACDA;
+}
+.main-card .content-box .price-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-card .content-box .price-time div {
+  display: flex;
+  align-items: center;
+  font-size: .9em;
+}
+.main-card .content-box .price-time div:first-of-type span {
+  color: #00FFF7;
+  margin-left: 5px;
+}
+.main-card .content-box .price-time div:last-of-type span {
+  color: #8BACDA;
+  margin-left: 5px;
+}
+.main-card .content-box hr {
+  border: none;
+  width: 100%;
+  height: 1.5px;
+  background-color: #2F415B;
+  margin: 20px 0;
+}
+.main-card .content-box .creation {
+  display: flex ;
+  align-items: center;
+}
+.main-card .content-box .creation img {
+  width: 16%;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.main-card .content-box .creation p {
+  width: fit-content;
+  margin: 0;
+  font-size: .9em;
+}
+.main-card .content-box .creation p a {
+  text-decoration: none;
+}
+.main-card .content-box .creation p a:hover {
+  color: #00FFF7;
+}
+.attribution {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #FFF;
+}
+@media (min-width: 375px) {
+  .main-card {
+    width: 35%;
+  }
+}
